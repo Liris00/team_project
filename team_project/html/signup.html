@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Choice - Login or Sign Up</title>
+    <link rel="stylesheet" href="gpt.css">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" aria-label="로고">빨강 파랑</div>
+        <div class="menu-toggle" id="menu-toggle" aria-label="메뉴 토글">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="nav-links">
+            <li><a href="#home">로그인</a></li>
+            <li><a href="#about">회원가입</a></li>
+            <li><a href="#contact">테스트</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+        <div class="title">
+            <form>
+                <fieldset>
+                    <legend style="margin-bottom: 20px;">회원가입</legend>
+                    <p>
+                        <label for="userid">아이디</label>
+                        <input type="text" id="userid" name="userid" required>
+                    </p>
+                    <p>
+                        <label for="password">비밀번호</label>
+                        <input type="password" id="password" name="password" required>
+                    </p>
+                    <p>
+                        <label for="confirm_password">비밀번호 확인</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>개인 정보 입력 [선택]</legend>
+                    <p>
+                        <label for="age">나이</label>
+                        <input type="number" id="age" name="age" min="0">
+                    </p>
+                    <p>
+                        <label for="sex">성별</label>
+                        <select id="sex" name="sex">
+                            <option value="남성">남성</option>
+                            <option value="여성">여성</option>
+                            <option value="기타">기타</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="job">직업</label>
+                        <select id="job" name="job">
+                            <option value="의료및보건">의료 및 보건</option>
+                            <option value="IT및기술" selected>IT 및 기술</option>
+                            <option value="교육및학문">교육 및 학문</option>
+                            <option value="예술및문화">예술 및 문화</option>
+                            <option value="환경및농업">환경 및 농업</option>
+                            <option value="금융및비즈니스">금융 및 비즈니스</option>
+                            <option value="법률및사법">법률 및 사법</option>
+                            <option value="공공및정부관련">공공 및 정부 관련</option>
+                            <option value="노동및제조업">노동 및 제조업</option>
+                            <option value="자영업및프리랜서">자영업 및 프리랜서</option>
+                            <option value="기타">기타</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="skin">인종</label>
+                        <select id="skin" name="skin">
+                            <option value="백인">백인</option>
+                            <option value="흑인">흑인</option>
+                            <option value="아시아계">아시아계</option>
+                            <option value="히스패닉">히스패닉</option>
+                            <option value="혼혈및기타">혼혈 및 기타</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="keyword">중요하다고 생각되는 키워드를 고르시오</label>
+                        <select id="keyword" name="keyword" multiple>
+                            <option value="백인">백인</option>
+                            <option value="흑인">흑인</option>
+                            <option value="아시아계">아시아계</option>
+                            <option value="히스패닉">히스패닉</option>
+                            <option value="혼혈및기타">혼혈 및 기타</option>
+                        </select>
+                    </p>
+                    <p>
+                        <button type="submit" id="submit">회원가입 완료</button>
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
