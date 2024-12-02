@@ -89,14 +89,15 @@ article legend {
 
 .form-container {
     background: #fff; /* 통일된 흰색 배경 */
-    padding: 40px;
+    padding: 40px; /* 내부 여백 */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 기존 섹션 그림자와 유사한 느낌으로 조정 */
-    max-width: 400px;
-    width: 100%;
+    max-width: 500px; /* 최대 너비를 넓게 설정 */
+    width: 90%; /* 화면 크기에 따라 유동적으로 조정 */
     text-align: center;
-    margin: 50px auto; /* 가운데 정렬 */
+    margin: 70px auto; /* 가운데 정렬 */
     border: 1px solid #ddd; /* 부드러운 테두리 추가 */
 }
+
 
 h1, h2, legend {
     color: #333; /* 전체적인 색상과 조화로운 진한 회색 */
@@ -231,3 +232,70 @@ button.action-btn:hover {
     border-color: #ddd;
 }
 
+/* 선택된 옵션 */
+.option.selected {
+    background-color: rgb(11, 184, 121);
+    color: white;
+}
+
+/* 페이지네이션 */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 5px;
+    radius: 20px;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.question {
+    margin-bottom: 50px;
+}
+
+.question p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.options {
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+}
+
+.options input[type="radio"] {
+    display: none; /* 라디오 버튼 숨기기 */
+}
+
+.options label {
+    display: block;
+    padding: 10px 15px;
+    background: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.options input[type="radio"]:checked + label {
+    background: #4caf50;
+    color: white;
+    border-color: #4caf50;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.options label:hover {
+    background: #e8f5e9;
+    color: #333;
+    border-color: #4caf50;
+}
